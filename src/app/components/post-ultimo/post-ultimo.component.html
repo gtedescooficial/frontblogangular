@@ -1,0 +1,17 @@
+
+
+
+  <div class="card mb-3">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img [src]="urlImages+recente.capa" class="card-img" [alt]="recente.titulo">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{recente.titulo}}</h5>
+          <p class="card-text" [innerHtml]="recente.conteudo">.</p>
+          <p class="card-text"><small class="text-muted">{{ titulo }} {{ recente.creadoem | amLocale:'es' | amTimeAgo}} por {{ recente.usuario.nombre }}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>

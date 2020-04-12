@@ -1,0 +1,10 @@
+<div class="col mb-4" >
+    <div class="card h-100">
+        <img [src]="urlImages+recente.capa" class="card-img-top" [alt]="recente.titulo">
+        <div class="card-body">
+        <h5 class="card-title"><a [routerLink]="['/details',recente.url]">{{ recente.titulo }}</a></h5>
+        <!-- <p class="card-text">{{ recente.conteudo }}</p> -->
+        <span class="badge badge-success">{{ recente.categoria.nome_da_categoria }}</span>
+
+    </div>
+</div>

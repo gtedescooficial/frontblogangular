@@ -1,0 +1,35 @@
+
+<h1 class="lead text-danger bolder mt-3"><u>{{ title }}</u> </h1>
+<section class="row">
+    <div class="col-md-9">
+
+   
+<div  *ngIf="recentes.length > 0">
+
+   <div *ngIf="ultimo.length > 0" class="row row-cols-1 row-cols-md-1">
+
+       <app-post-ultimo [recente]="ultimo[0]" [urlImages]="urlImages" ></app-post-ultimo>
+   </div>
+   <div class="row row-cols-1 row-cols-md-3">
+
+       <div *ngFor="let recente of recentes; let id = index;" >
+           
+           <app-post-list-item [recente]="recente" ></app-post-list-item>
+        </div>
+    </div>
+
+</div>
+
+  <!-- CASO NAO TENHA POSTS PARA MOSTRAR -->
+  <div class="row mt-5" *ngIf="recentes.length === 0">
+    <div class="col-md-8 p-3 offset-md-2 mb-4 mt-5 alert alert-info">
+      <p class="text-center"><strong>Não ha posts recentes para exhibir !!</strong></p>
+      </div>
+    </div>
+    
+</div>
+<div class="col-md-3">
+
+</div>
+
+</section>
